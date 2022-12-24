@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+}
+body {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1em;
+  background-color: #1f2039;
+}
+
+a {
+  color: #242424;
+  text-decoration: none;
+}
+
+em {
+  color: #a5b4fc;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 3.5em;
+  color: #a5b4fc;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+  color: #f9f8ff;
+}
+
+p,
+li {
+  font-size: 1.1em;
+  color: #f9f8ff;
+}
+.image-repete{
+display: flex; /*quand on veut centre un elt il faut donne la propriete display:flex; apres on centre avec justify-content: center;*/ 
+justify-content: center;
+}
+
+header ,
+footer{
+  background-color: white;
+  padding: 20px 50px;
+}
+
+.cta {
+  background: linear-gradient(#8e86b5, #acaeed);
+  color: white;
+  border-radius: 50px;
+  padding: 20px 30px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.cta:hover {
+  background: linear-gradient(#696484, #8788ba);
+  text-decoration: none;
+}
+
+.lien-icone:hover {
+  opacity: 0.5;
+}
+
+.carre-contenu {
+  padding: 50px;
+  border-right: 1px solid #8e86b5;
+  border-bottom: 1px solid #8e86b5;
+}
+.carre-contenu h2 {
+  margin-top: 30px;
+}
+/* .carre-contenu c'est class appartien h2  */
+.carre-contenu ul {
+  margin-top: 30px;
+}
+
+section {
+  padding: 50px;
+}
+
+
+.a-propos-main{
+  margin: auto;
+  width: 50%;
+}
+.carre-contenu p {
+  text-align: justify;
+}
+.image-robbies{
+  padding-top: 20px;
+}
+
+.titre2{
+  font-size:xx-large;
+  border: #1f2039 solid;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.images1,
+.images2{
+  display: flex;
+  justify-content: center;
+  
+}
+/*essai grid
+.box {
+  height: 150px;
+  color: white;
+}*/
+
+/*
+essai d'un flex
+.conteneur {
+  display: flex;
+  align-items: center;
+  align-items: center;
+      display: grid;
+    grid-template-columns: 300px 300px 300px;
+  
+  }*/
+.class-tarif{
+  /*avec ces 2 ligne on peut centre un elt bloc */
+  display: flex;
+  justify-content: center;  
+  padding-top: 50px;
+  padding-bottom: 70px;
+}
+  caption{
+    text-align: center;
+    font-size: xx-large;
+    color: white;
+  }
+  table{
+    text-align: center;
+    height: 400px;
+    width: 50%;
+    color: white;
+    border:  2px solid white;
+    border-collapse:collapse; /* cette prprite pour coller les lignes verical et horizontal pour le tableau*/
+  }
+  td,
+  th{
+    color: white;
+    border: 1px solid white;
+  }
+  form{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 50%;
+   
+  }
+  input
+ {
+   background-color: #b3aed4;
+    height: 30px;
+    border: 1px   solid black;
+  }
+  textarea{
+
+      background-color: #b3aed4;
+    height: 200px;
+    border: 1px   solid black;
+  }  
+  option{
+    background-color: #6d7458;
+      }
+      fieldset{
+        background-color: #e5cbda;
+        color: black;
+      }
+  legend{
+    background-color: #696484;
+    color:black;
+    font-size:larger;
+  }  
+
+
+
+/*media queris==prpriete css pour taille de page adapte avec tous les ecran
+apartrir de largeur indique la page change quelque propriet et supprime quelque element*/
+@media screen and ( max-width:960px ) { /* on peut utilise aussi only(uniquement) et not (non)
+  à la place de and*/
+  p{
+    color: #d6fa09;
+  }
+  img{
+    display: none; /* exp : supprime les images si l'ecran moin de 960px*/
+  }
+  p{
+    overflow: scroll; /* permettre de scrole le text et depasse pas son bloc*/
+  }
+  
+}
+

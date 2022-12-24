@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <link href="style.css" rel="stylesheet">
+        <title>Form  Lens Photographie</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <!-- lien sur un image --> 
+                <img src="dossier-demo/logo.png" alt="page d'accueil" >
+                <a href="index.html" >Accueil&nbsp;&nbsp;</a>
+                <a href="a-propos.html" >À propos&nbsp;&nbsp;</a>
+                <!--pour laisse en easpace entre les mots en utlise l'entite html &nbsp;-->
+                <a href="tarif.html" >Tarifs</a>
+               
+               </nav>
+        </header>
+        <main>
+            <div class="image-repete">
+                <img   src="dossier-images/robbies.jfif" alt="photo robbies">
+                <img   src="dossier-images/robbies.jfif" alt="photo robbies">
+                <img   src="dossier-images/robbies.jfif" alt="photo robbies">
+                <img   src="dossier-images/robbies.jfif" alt="photo robbies">
+                <img   src="dossier-images/robbies.jfif" alt="photo robbies">
+            </div>
+            <section>
+            <form action="doc-php.php" method="get">
+               <fieldset> <!--on ajoute la balise <fieldset> pour bien groupe la formulaire-->
+                <legend >Vos cordonnes</legend> <!--balise de legend permet de donne un nom au groupe de formulairs-->
+                <label for="prenom">Votre prenom</label>
+                <input type="text" name="prenom" id="prenom" placeholder="Ex: Houda" required><br>
+                <!--donner une indication sur le contenu du champ avec  placeholder .
+                 Cette indication disparaîtra dès que le visiteur aura cliqué à l'intérieur du champ.-->
+                
+                <label for="nom">Votre nom</label>
+                <input type="text" name="nom" id="nom" value="votr nom" required><br>
+                <!--on utilise l'attribut value pour pré-remplir le champ avec une valeur par défaut à l'aide de-->
+             <!--pour entre une date et affiche calendreie-->
+             <label for="Date">Votre date de naissance</label>
+             <input type="number" id="Date"  name="trip-start" value="2023-01-01" max="2024-01-01" min="1900-01-01" required>
+            </fieldset> 
+            <!-- treeeeeeeeeeeees important l'attribut required oblige de remplir un champs avant d'envoyer la formulaire-->
+            <fieldset>
+                <legend> Vos contacts</legend>
+                <label for="telephone">Votre numero de telephone</label>
+                <input type="tel" name="telephone" id="telephone" maxlength="9"><br>
+                <!--on utilise l'attribut maxlength pour limite le nombre de caracter saisir-->
+                    <label for="mail">Votre mail</label>
+                <input type="email" name="mail" id="mail"><br>
+                </fieldset>
+               
+            <fieldset>
+                <legend>Vos opinion</legend>
+                <!--on peut ajoute un text -->
+                <label for="opinion" >Donnez svp votre opinion</label><br>
+                <textarea name="opinion" id="opinion" maxlength="200" placeholder="Ecrivez votre opinion"></textarea>
+            </fieldset>
+            <input type="submit" value="Envoyer"
+            </form>
+        </section>
+        <section>
+           <form method="get" action="">
+            <p>Coche votre situation :<br>
+            <!--laisse le visiteur choisie une choix ou beacaoup de choix-->
+           
+            <input type="checkbox" name="bebe" id="bebe"> <label for="bebe">C'est un bébé</label><br>
+            <input type="checkbox" name="enfant" id="enfant"><label for="enfant">C'est un enfant</label><br>
+            <input type="checkbox" name="adulte" id="adulte"><label for="adulte">C'est un adulte</label><br>
+</p> <!--remarque tres important les choix dans paragraphe avec la balise <p> pour bien ranger et alligne attention de ça-->
+
+        </form>
+        <br><br>
+        <form method="get" action="">
+           <p>Coche votre intervale de votre age :<br>
+ <!-- maintenant on laisse le visiteur choisie une seul choix pas plus on utilse type radio pour ça-->
+          <input type="radio" name="age" value="age1"  id="age1"><label for="age1">votre age moin de 18ans</label><br>
+          <input type="radio" name="age" value="age2"  id="age2"><label for="age2">votre age entr 18ans et 65ans</label><br>
+          <input type="radio" name="age" value="age3"  id="age3"><label for="age3">votre age plus de 65ans</label><br>
+        </p> 
+        <!--pour donne une seul choix il faut la valeur name la meme dans tous les choix
+        et pour les valeurs de value et id c'est pas important la meme ou differnt-->
+        </form>
+    <!--maintenant inser une liste de choix deroulant on peut faire ça avec la balise select et opition-->
+    <br> <br>
+    <form method="get" action="">
+        <pr>
+            <label class="label-choix-pays" for="pays">Choisir votre pays d'origine parmi la liste:</label><br><br>
+            <select name="pays" id="pays">
+                <option value="France">France</option>
+                <option value="Canada">Canada</option>
+                <option value="Tunis" selected >Tunis</option> <!--on utilise l'attribut selected pour 
+                    'une option soit sélectionnée par défaut exemple ici je choisi tunis-->
+                <option value="Algeri">Algeri</option>
+            </select>
+
+        </pr>
+    </form>
+        </section>
+        </main>
+        <footer></footer>
+    </body>
+</html>
